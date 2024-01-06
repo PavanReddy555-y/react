@@ -1,0 +1,34 @@
+<script>
+    // var userName = prompt("Enter user name ?")
+   // var designation = prompt("Enter Designation ?")
+     
+   // var pName = prompt("Enter a Product Name ?")
+   /*
+    class Product
+    {
+        _productName;
+        get ProductName(){
+            return this._productName; 
+        }
+        set ProductName(newProductName){
+            if(designation == "Admin"){
+                this._productName = newProductName;
+            }else{
+                document.write(`Unauthorized ! ${userName} u are not allowed to give value` )
+            }
+        }
+
+    }
+    let obj = new Product();
+    obj.ProductName = pName;
+    if(obj.ProductName){
+        document.write(` Product Name : ${obj.ProductName}`)
+    }
+    */
+    fetch("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY")
+        .then(response => response.json())
+        .then(data =>{
+            console.log(data)
+        })
+
+</script>
